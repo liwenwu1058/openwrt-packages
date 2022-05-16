@@ -59,7 +59,7 @@
 
 		local eth_info = ""
 		if not has_switch then
-			eth_info = luci.sys.exec("ethinfo")
+			eth_info = luci.sys.exec("ethinfo 2>/dev/null")
 		end
 
 		local up_time = luci.sys.exec("cntime")

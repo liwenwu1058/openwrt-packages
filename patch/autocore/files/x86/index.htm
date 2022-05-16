@@ -47,7 +47,7 @@
 
 
 
-		local eth_info = luci.sys.exec("ethinfo")
+		local eth_info = luci.sys.exec("ethinfo 2>/dev/null")
 		local user_info = luci.sys.exec("cat /proc/net/arp | grep '0x2' | wc -l") or "0"
 		local cpu_wd ="+".. (luci.sys.exec("/sbin/tempinfo")) .. "°C"
         if  cpu_wd == "+0°C" or cpu_wd == "+°C"   then
